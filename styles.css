@@ -1,3 +1,8 @@
+:root{
+    --purple-ligth: rgb(233, 233, 233);
+    --purple-dark: rgb(95, 6, 159);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -25,8 +30,8 @@ h1 {
 }
 
 span {
-    background-color: rgb(255, 222, 227);
-    color: rgb(255, 136, 156);
+    background-color: var(--purple-dark);
+    color: var(--purple-ligth);
     padding: 0 10px;
     border-radius: 5px;
 }
@@ -34,7 +39,7 @@ span {
 a {
     text-decoration: none;
     margin-top: 18px;
-    color: #555;
+    color: #e3e3e3;
 }
 
 /* header */
@@ -64,11 +69,14 @@ header nav ul {
 header nav ul li a {
     text-decoration: none;
     color: rgb(55, 55, 55);
-    transition: text-shadow 300ms ease;
+    transition: all 300ms ease-in-out;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
 }
 
 header nav ul li a:hover {
     text-shadow: 0 0 1px #000;
+    border-bottom: 3px solid #ff00ee;
 }
 
 .header-section {
@@ -107,15 +115,18 @@ button {
     height: 30px;
     border-radius: 3px;
     color: #fff;
+    text-shadow: 0 0 10px #ffff;
     font-weight: bold;
-    background-color: orange;
+    background-color: var(--purple-dark);
+    box-shadow: 0 0 5px #fff;
     outline: none;
     border: none;
     transition: all 600ms ease;
+    user-select: none;
 }
 
 button:hover {
-    background-color: orangered;
+    background-color: var(--purple-dark);
     cursor: pointer;
     box-shadow: 0 0 20px #fff;
     transform: scale(1.1);
@@ -176,6 +187,7 @@ button:hover {
     width: 100%;
     border-radius: 20px;
     filter: saturate(2);
+    box-shadow: 0 5px 90px #5050507c;
 }
 
 .about-info {
@@ -221,11 +233,20 @@ button:hover {
     max-width: 400px;
     /* position: static; */
     /* height: 310px; */
+    height: 250px;
+    overflow: hidden;
+}
+
+.proyecto:hover{
+    transition: all 300ms ease-in;
+    box-shadow: 0 0px 8px #292929;
 }
 
 
 .proyecto img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .proyecto-info {
@@ -266,7 +287,7 @@ button:hover {
 
 .pricing-card h2 {
     font-size: 2.5rem;
-    color: orange;
+    color: #3d3d3d;
 }
 
 
@@ -339,8 +360,8 @@ button:hover {
 .contact-details .contact-logo {
     width: 60px;
     height: 60px;
-    background-color: rgb(255, 222, 227);
-    color: rgb(255, 136, 156);
+    background-color: rgba(255, 192, 230, 0.563);
+    color: #ff00ee;
     border-radius: 50%;
     margin: 0 auto 20px auto;
     line-height: 60px;
@@ -387,16 +408,15 @@ textarea {
 
 .contact-form form input:focus,
 .contact-form form textarea:focus {
-    border: 1px solid rgb(255, 136, 156);
+    border: 1px solid #ff00ee;
     box-shadow: 0 0 6px rgb(255, 136, 156);
-    background-color: rgb(255, 246, 249);
 }
 
 /* FOOTER */
 footer {
     width: 100%;
-    color: #555;
-    background-color: rgb(255, 246, 249);
+    color: #fff;
+    background: linear-gradient(135deg, indigo, #580052);
     padding: 40px;
 }
 
@@ -414,7 +434,7 @@ footer p {
 }
 
 .footer-container__info {
-    color: #555;
+    color: #fff;
     /* width: 20%;
     min-width: 350px; */
     display: flex;
@@ -425,7 +445,8 @@ footer p {
 }
 
 .footer-container__info i {
-    color: rgb(255, 136, 156);
+    color: #ff00ee;
+    text-shadow: 0 0 5px #ff00ee;
 }
 
 .btn-expandir {
